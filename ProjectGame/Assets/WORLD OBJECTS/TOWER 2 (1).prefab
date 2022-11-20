@@ -2257,7 +2257,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3243597576702870917}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05652809, y: 14.07, z: 0.119999886}
+  m_LocalPosition: {x: -0.05652809, y: 14.88, z: 0.119999886}
   m_LocalScale: {x: 1.7555763, y: 1.4456147, z: 1.4456147}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -37813,6 +37813,10 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 927
       objectReference: {fileID: 0}
+    - target: {fileID: 6118959840820051866, guid: 12156e6f48c894d4089f504e030ddbbf, type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6118959840820051868, guid: 12156e6f48c894d4089f504e030ddbbf, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -37962,6 +37966,10 @@ PrefabInstance:
     - target: {fileID: 6118959840820051864, guid: 12156e6f48c894d4089f504e030ddbbf, type: 3}
       propertyPath: m_VersionIndex
       value: 984
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118959840820051866, guid: 12156e6f48c894d4089f504e030ddbbf, type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6118959840820051868, guid: 12156e6f48c894d4089f504e030ddbbf, type: 3}
       propertyPath: m_Mesh
@@ -38113,6 +38121,10 @@ PrefabInstance:
       propertyPath: m_VersionIndex
       value: 957
       objectReference: {fileID: 0}
+    - target: {fileID: 6118959840820051866, guid: 12156e6f48c894d4089f504e030ddbbf, type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6118959840820051868, guid: 12156e6f48c894d4089f504e030ddbbf, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -38262,6 +38274,10 @@ PrefabInstance:
     - target: {fileID: 6118959840820051864, guid: 12156e6f48c894d4089f504e030ddbbf, type: 3}
       propertyPath: m_VersionIndex
       value: 942
+      objectReference: {fileID: 0}
+    - target: {fileID: 6118959840820051866, guid: 12156e6f48c894d4089f504e030ddbbf, type: 3}
+      propertyPath: m_SelectedEditorRenderState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6118959840820051868, guid: 12156e6f48c894d4089f504e030ddbbf, type: 3}
       propertyPath: m_Mesh
