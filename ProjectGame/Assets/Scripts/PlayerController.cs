@@ -9,8 +9,14 @@ public class PlayerController : MonoBehaviour
     //private float turnSpeed = 25.0f;
     private float horizontalInput;
     private float forwardInput;
-    private Rigidbody playerRb;
+    public Rigidbody playerRb;
     private GameObject focalPoint;
+
+
+    //adding vars to make the player jump
+    public float jumpAmount = 35;
+    public bool isGrounded;
+    float jumpTime = 2.5f;
     //public Transform orientation;
 
     //Vector3 moveDirection;
@@ -21,6 +27,18 @@ public class PlayerController : MonoBehaviour
         focalPoint = GameObject.Find("focal Point");
     }
 
+    private void FixedUpdate()
+    {
+        if(!isGrounded && jumpTime >0 )
+        {
+            playerRb.AddForce(0, jumpAmount, 0);
+        }
+       
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        isGrounded = false;   
+    }
     // Update is called once per frame
     void Update()
     {
@@ -29,6 +47,15 @@ public class PlayerController : MonoBehaviour
          horizontalInput = Input.GetAxis("Horizontal");
          forwardInput = Input.GetAxis("Vertical");
 
+        // Making player jump
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            isGrounded = false;
+        }
+        if (!isGrounded)
+        {
+            jumpTime -= Time.deltaTime;
+        }
         //playerRb.AddForce(focalPoint.transform.forward * speed * forwardInput2);
          //playerRb.AddForce(focalPoint.transform.forward * speed * horizontalInput2);
 

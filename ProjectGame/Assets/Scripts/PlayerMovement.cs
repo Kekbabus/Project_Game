@@ -17,6 +17,11 @@ public class PlayerMovement : MonoBehaviour
     Vector3 moveDirection;
 
     Rigidbody rb;
+
+    public float jumpHeight = 5f;
+    bool isGrounded;
+    float jumpTime = 0.2f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,11 +39,31 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         MyInput();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            isGrounded = false;
+        }
+        if (!isGrounded)
+        {
+            jumpTime -= Time.deltaTime;
+        }
     }
 
     private void FixedUpdate()
     {
+        if (!isGrounded && jumpTime >0)
+        {
+            rb.AddForce(0, jumpHeight, 0);
+        }
         MovePlayer();
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Map")
+        {
+            jumpTime =0.2f;
+            isGrounded = true;
+        }
     }
 
     private void MovePlayer()
